@@ -1,0 +1,24 @@
+{
+  "name": "doerkit",
+  "version": "0.0.1",
+  "private": true,
+  "description": "An assessment-first learning platform: lessons with LLM-graded constructed-response quizzes and spaced cumulative reviews. Named for the doer effect.",
+  "license": "MIT",
+  "author": "Michael Tuszynski",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^20.17.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
