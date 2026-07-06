@@ -1,0 +1,149 @@
+{
+  "lessonId": "m1-l01",
+  "questions": [
+    {
+      "kind": "mcq",
+      "id": "m1-l01-q01",
+      "prompt": "A researcher wants to know the average commute time of all residents of a city and surveys 500 of them. The 500 surveyed residents are the:",
+      "choices": ["population", "sample", "parameter", "statistic"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l01-q02",
+      "prompt": "The average commute time computed from those 500 responses (29.8 minutes) is a:",
+      "choices": [
+        "parameter, because it describes commute times",
+        "statistic, because it was computed from a sample",
+        "parameter, because the survey was random",
+        "statistic, because it is an average"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l01-q03",
+      "prompt": "Which of the following is quantitative and DISCRETE?",
+      "choices": [
+        "Time spent on homework each week",
+        "Zip code of a student's home address",
+        "Number of courses a student is enrolled in",
+        "Body temperature in degrees Celsius"
+      ],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l01-q04",
+      "prompt": "A university divides students into first-years, sophomores, juniors, and seniors, then randomly selects 50 from each group. This design is a:",
+      "choices": [
+        "simple random sample",
+        "cluster sample",
+        "systematic sample",
+        "stratified sample"
+      ],
+      "correctChoice": 3
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l01-q05",
+      "prompt": "A news site posts a poll that any visitor can answer, and 250,000 people respond. The main problem with using these results to describe all adults is:",
+      "choices": [
+        "the sample is too small to be reliable",
+        "the sampling method is biased no matter how many respond",
+        "percentages cannot be computed from voluntary polls",
+        "online responses cannot be quantitative data"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l01-q06",
+      "prompt": "A residence hall director randomly picks 4 of the building's 40 suites and surveys EVERY student living in those 4 suites. This is a:",
+      "choices": [
+        "cluster sample",
+        "stratified sample",
+        "convenience sample",
+        "simple random sample"
+      ],
+      "correctChoice": 0
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l01-q07",
+      "prompt": "Explain the difference between a parameter and a statistic, and give one example of each for a study of household incomes in a county.",
+      "modelAnswer": "A parameter is a number that describes the entire population, while a statistic is the same kind of number computed from a sample. For example, the true mean income of all households in the county is a parameter; the mean income of 800 surveyed households is a statistic used to estimate it.",
+      "rubric": [
+        {
+          "id": "defines-both",
+          "description": "Correctly distinguishes parameter (describes the population) from statistic (computed from a sample)",
+          "weight": 2
+        },
+        {
+          "id": "example",
+          "description": "Gives a sensible income-study example of each (or one clear paired example)",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l01-q08",
+      "prompt": "A campus club polls students in the library at 9 p.m. about extending library hours and finds 92% support. Name the sampling method, explain why the result is untrustworthy, and state whether surveying more students the same way would fix it.",
+      "modelAnswer": "This is a convenience sample: it measures whoever is easiest to reach. Students in the library at night are exactly the people who benefit from longer hours, so the sample is biased toward support. Increasing the sample size would not fix it, because a larger biased sample just gives a more precise estimate of the wrong group — size reduces random error, not systematic bias.",
+      "rubric": [
+        {
+          "id": "names-method",
+          "description": "Identifies the design as a convenience (biased/non-random) sample",
+          "weight": 1
+        },
+        {
+          "id": "explains-bias",
+          "description": "Explains that late-night library users systematically differ on this question from students generally",
+          "weight": 1
+        },
+        {
+          "id": "size-no-fix",
+          "description": "States that a larger sample does not remove bias (size fixes random error, not systematic error)",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l01-q09",
+      "prompt": "Classify each variable as qualitative, quantitative-discrete, or quantitative-continuous, with a one-phrase reason: (a) a student's major, (b) number of pets in a household, (c) time to run a 5K.",
+      "modelAnswer": "(a) Major is qualitative — it places students into categories with no numeric meaning. (b) Number of pets is quantitative and discrete — it is a count that can only take separated whole values. (c) 5K time is quantitative and continuous — it is a measurement that can take any value in a range, like 24.63 minutes.",
+      "rubric": [
+        {
+          "id": "all-three-correct",
+          "description": "Classifies all three correctly (qualitative; discrete; continuous)",
+          "weight": 2
+        },
+        {
+          "id": "reasons",
+          "description": "Gives a correct reason for at least two classifications (categories vs count vs measurement)",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l01-q10",
+      "prompt": "A school wants to estimate average daily screen time of its 1,200 students. Describe how to take a systematic sample of about 60 students, including where randomness enters.",
+      "modelAnswer": "Put the 1,200 students in an ordered list, compute k = 1200/60 = 20, randomly choose a starting position between 1 and 20, then select every 20th student from that start. Randomness enters once, in choosing the starting position; after that the selection is mechanical.",
+      "rubric": [
+        {
+          "id": "every-kth",
+          "description": "Describes ordering the list and taking every k-th student with k ≈ 20",
+          "weight": 2
+        },
+        {
+          "id": "random-start",
+          "description": "States that the starting point is chosen at random",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

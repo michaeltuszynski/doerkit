@@ -13,15 +13,21 @@
     "test": "tsx --test test/*.test.ts",
     "lint": "biome check .",
     "typecheck": "tsc --noEmit",
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsx src/app/server.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20.17.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.110.0"
+    "@anthropic-ai/sdk": "^0.110.0",
+    "@hono/node-server": "^2.0.8",
+    "better-sqlite3": "^12.11.1",
+    "hono": "^4.12.28",
+    "marked": "^18.0.5"
   }
 }

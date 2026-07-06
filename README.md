@@ -26,15 +26,29 @@ the blog series covers why each is excluded.
 
 ## Status
 
-Early scaffold. Built milestone-by-milestone alongside a blog series at
+Working. Built milestone-by-milestone alongside a blog series at
 [The Cloud Codex](https://www.mpt.solutions); each post ships a working stage. The grading
 engine is regression-tested with the sibling project
 [rubric-bench](https://github.com/michaeltuszynski/rubric-bench).
 
-## Development
+![Dashboard](docs/screenshots/dashboard.png)
+
+## Run it yourself
 
 ```bash
 npm install
+export ANTHROPIC_API_KEY=sk-ant-...   # required to grade written answers
+npm run dev                           # http://localhost:8734
+```
+
+Pick a name, work a lesson, take its quiz (4 questions, 75% to pass, unlimited retries).
+Written answers are graded by an LLM against the instructor rubric; multiple choice is
+auto-graded. The cumulative module review interleaves questions across every lesson at a
+90% bar and nudges you toward spaced retries. `/dashboard` shows per-student dosage.
+
+## Development
+
+```bash
 npm test        # offline — no API key required
 npm run lint
 npm run typecheck

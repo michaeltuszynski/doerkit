@@ -1,0 +1,119 @@
+{
+  "lessonId": "m1-l03",
+  "questions": [
+    {
+      "kind": "mcq",
+      "id": "m1-l03-q01",
+      "prompt": "For the dataset 3, 5, 5, 8, 9, the mean is:",
+      "choices": ["5", "6", "7.5", "8"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l03-q02",
+      "prompt": "For the sorted dataset 12, 15, 18, 22, 30, 41, the median is:",
+      "choices": ["18", "20", "22", "23"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l03-q03",
+      "prompt": "Which measure of center is most resistant to outliers?",
+      "choices": ["the mean", "the median", "the weighted mean", "they are equally resistant"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l03-q04",
+      "prompt": "A county reports mean home price $610,000 and median home price $405,000. The distribution of prices is most likely:",
+      "choices": ["symmetric", "left-skewed", "right-skewed", "bimodal"],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l03-q05",
+      "prompt": "Which variable can have a mode but CANNOT have a mean?",
+      "choices": ["number of siblings", "blood type", "annual salary", "exam score"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l03-q06",
+      "prompt": "A final exam counts 40% and homework counts 60%. A student scores 90 on the final and 80 on homework. Their weighted average is:",
+      "choices": ["85", "84", "86", "88"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l03-q07",
+      "prompt": "Nine employees earn salaries with mean ≈ 51.7k and median 52k. The founder, who earns 400k, is added to the dataset. Explain what happens to the mean and to the median, and why they behave differently.",
+      "modelAnswer": "The mean jumps dramatically (to 86.5k) because every value pulls on the mean in proportion to its size, so one huge salary exerts enormous leverage. The median barely moves (52k to 53k) because it depends only on the order of the middle values, not the magnitude of the extremes. This is the difference in resistance: the median is resistant to outliers and the mean is not.",
+      "rubric": [
+        {
+          "id": "mean-rises",
+          "description": "States the mean rises substantially while the median barely changes",
+          "weight": 1
+        },
+        {
+          "id": "mechanism",
+          "description": "Explains why: the mean is pulled by magnitude, the median depends only on middle order/position",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l03-q08",
+      "prompt": "A journalist wants to describe the 'typical' household income in a right-skewed city. Which measure of center should they report, and what different question would the other measure answer?",
+      "modelAnswer": "They should report the median, because in right-skewed data the mean is inflated by a small number of very high incomes and no longer describes a typical household. The mean answers a different question: total income spread evenly per household, which is relevant for things like total tax base but not for 'what does a typical family earn.'",
+      "rubric": [
+        {
+          "id": "median-choice",
+          "description": "Chooses the median and ties it to right skew / outlier inflation of the mean",
+          "weight": 2
+        },
+        {
+          "id": "mean-question",
+          "description": "States what the mean legitimately answers (total per capita / aggregate style question)",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l03-q09",
+      "prompt": "A dataset is symmetric with no outliers. Your colleague insists on reporting the median anyway 'to be safe.' Is anything lost by that choice? Explain.",
+      "modelAnswer": "Not much is lost for description — in symmetric data the mean and median nearly coincide, so both report the same typical value. But the mean uses all the information in every observation and is the foundation for later inferential methods, so when the data is well-behaved the mean is the more informative and conventional choice.",
+      "rubric": [
+        {
+          "id": "agreement",
+          "description": "Notes mean ≈ median for symmetric data, so the reported value is nearly the same",
+          "weight": 1
+        },
+        {
+          "id": "tradeoff",
+          "description": "Identifies what the mean offers (uses all values / supports further analysis) when data has no outliers",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l03-q10",
+      "prompt": "Your course has three components: quizzes worth 20%, a midterm worth 30%, and a final worth 50%. You scored 95 on quizzes, 82 on the midterm, and 74 on the final. Compute your course average and state why the unweighted mean of the three scores would be misleading.",
+      "modelAnswer": "The weighted mean is 95(0.2) + 82(0.3) + 74(0.5) = 19 + 24.6 + 37 = 80.6. The unweighted mean, (95 + 82 + 74)/3 ≈ 83.7, would be misleading because it treats every component as equally important, but the final actually counts two and a half times as much as quizzes.",
+      "rubric": [
+        {
+          "id": "computation",
+          "description": "Computes the weighted mean correctly (80.6)",
+          "weight": 2
+        },
+        {
+          "id": "why-weighted",
+          "description": "Explains the unweighted mean ignores the components' different weights",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

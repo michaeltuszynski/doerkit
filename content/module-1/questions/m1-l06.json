@@ -1,0 +1,139 @@
+{
+  "lessonId": "m1-l06",
+  "questions": [
+    {
+      "kind": "mcq",
+      "id": "m1-l06-q01",
+      "prompt": "A correlation coefficient of r = −0.85 between hours of TV and exam scores indicates:",
+      "choices": [
+        "a strong negative linear relationship",
+        "a weak negative relationship",
+        "that TV causes lower scores",
+        "a computational error, since r cannot be negative"
+      ],
+      "correctChoice": 0
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l06-q02",
+      "prompt": "Which value of r indicates the STRONGEST linear relationship?",
+      "choices": ["r = 0.75", "r = −0.92", "r = 0.05", "r = 0.5"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l06-q03",
+      "prompt": "Ice cream sales and drowning deaths are strongly correlated. The best explanation is:",
+      "choices": [
+        "ice cream consumption impairs swimming",
+        "coincidence — with enough data everything correlates",
+        "a lurking variable (summer weather) drives both",
+        "drownings increase ice cream sales"
+      ],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l06-q04",
+      "prompt": "A perfect U-shaped relationship between two variables would produce a correlation coefficient near:",
+      "choices": ["+1", "−1", "0", "0.5"],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l06-q05",
+      "prompt": "A bar chart's vertical axis starts at 96 instead of 0, making a 2% difference between bars look enormous. This technique is called:",
+      "choices": [
+        "axis truncation",
+        "class-width manipulation",
+        "Simpson's paradox",
+        "cherry-picking"
+      ],
+      "correctChoice": 0
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l06-q06",
+      "prompt": "A treatment looks worse than a control overall, yet better within both the mild-case and severe-case subgroups. This reversal is known as:",
+      "choices": [
+        "nonresponse bias",
+        "regression to the mean",
+        "Simpson's paradox",
+        "the empirical rule"
+      ],
+      "correctChoice": 2
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l06-q07",
+      "prompt": "A study finds r = 0.72 between the number of firefighters sent to a fire and the damage the fire causes. A politician concludes that sending fewer firefighters would reduce damage. Explain the error and identify the lurking variable.",
+      "modelAnswer": "The politician has read a correlation as a cause. Fire severity is the lurking variable: bigger fires get more firefighters AND cause more damage, so the two rise together without one causing the other. Cutting firefighters would not shrink fires — the correlation reflects the severity driving both variables.",
+      "rubric": [
+        {
+          "id": "corr-not-cause",
+          "description": "Identifies the mistake as treating correlation as causation",
+          "weight": 1
+        },
+        {
+          "id": "lurking",
+          "description": "Names fire size/severity as the lurking variable driving both counts",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l06-q08",
+      "prompt": "Six data points show a clean linear pattern with r ≈ 0.99. One additional unusual point drops r to 0.1. What property of r does this demonstrate, and what should you always do before trusting a reported correlation?",
+      "modelAnswer": "It demonstrates that r is not resistant: a single outlier can destroy (or manufacture) a correlation, because r is built from means and deviations that extreme points dominate. Before trusting any reported r, look at the scatterplot — the plot reveals outliers, curvature, and clusters that the single number hides.",
+      "rubric": [
+        {
+          "id": "not-resistant",
+          "description": "Names non-resistance of r to outliers",
+          "weight": 2
+        },
+        {
+          "id": "plot-first",
+          "description": "Prescribes examining the scatterplot before trusting r",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l06-q09",
+      "prompt": "A headline reads: 'Shark attacks double at local beaches!' What single follow-up question from this lesson's field guide should you ask first, and why does it matter?",
+      "modelAnswer": "Ask for the actual counts — the silent denominator. Doubling from one attack to two is a very different story than from 50 to 100, and percentage-change language hides the base. Rates and changes only mean something once you know the raw numbers they were computed from.",
+      "rubric": [
+        {
+          "id": "denominator",
+          "description": "Asks about the base counts / denominator behind the percentage change",
+          "weight": 2
+        },
+        {
+          "id": "why",
+          "description": "Explains that small bases make dramatic-sounding relative changes trivial",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l06-q10",
+      "prompt": "You compute r = 0.45 between daily study minutes and quiz scores for your class. Write two honest sentences reporting this result: one stating what the data shows, and one stating what it does NOT show.",
+      "modelAnswer": "The data shows a moderate positive linear association between study minutes and quiz scores in this class — students who studied more tended to score somewhat higher. It does not show that studying caused the higher scores: motivated students may both study more and score higher, and this observational data cannot separate those explanations.",
+      "rubric": [
+        {
+          "id": "shows",
+          "description": "Reports a moderate positive association, correctly hedged to this data",
+          "weight": 1
+        },
+        {
+          "id": "not-shows",
+          "description": "Explicitly disclaims causation and ideally names a plausible lurking factor",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

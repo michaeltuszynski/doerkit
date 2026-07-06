@@ -29,7 +29,7 @@ export function createAnthropicClient(options: AnthropicClientOptions = {}): Mod
         system: systemPrompt,
         messages: [{ role: 'user', content: userPrompt }],
       });
-      const block = response.content[0];
+      const block = response.content.find((b) => b.type === 'text');
       if (!block || block.type !== 'text') {
         throw new Error(`Unexpected response shape from ${model}: no text block`);
       }

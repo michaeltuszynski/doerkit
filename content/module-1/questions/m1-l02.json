@@ -1,0 +1,140 @@
+{
+  "lessonId": "m1-l02",
+  "questions": [
+    {
+      "kind": "mcq",
+      "id": "m1-l02-q01",
+      "prompt": "In a relative frequency table, the relative frequencies of all classes must:",
+      "choices": [
+        "equal the sample size",
+        "sum to 1 (allowing for rounding)",
+        "each be at least 0.05",
+        "increase from class to class"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l02-q02",
+      "prompt": "A histogram of household incomes shows most bars clustered at lower values with a long tail stretching toward high incomes. The distribution is:",
+      "choices": ["left-skewed", "symmetric", "right-skewed", "bimodal"],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l02-q03",
+      "prompt": "The bars of a histogram touch, but the bars of a bar chart do not. The reason is:",
+      "choices": [
+        "histograms show continuous numeric intervals; bar charts show separate categories",
+        "histograms always have more classes than bar charts",
+        "bar charts are only used for small samples",
+        "it is purely a style convention with no meaning"
+      ],
+      "correctChoice": 0
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l02-q04",
+      "prompt": "In a cumulative relative frequency table for study hours, the row for the class ending at 10 hours shows 0.62. This means:",
+      "choices": [
+        "62% of students study exactly 10 hours",
+        "62% of students study 10 hours or less",
+        "62% of students study more than 10 hours",
+        "the class from 8 to 10 hours contains 62% of students"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l02-q05",
+      "prompt": "Scores on a very easy exam, where most students score high and a few score very low, produce a distribution that is:",
+      "choices": [
+        "right-skewed, because most scores are high",
+        "left-skewed, because the tail stretches toward low scores",
+        "symmetric, because the exam had a maximum score",
+        "uniform, because everyone took the same exam"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l02-q06",
+      "prompt": "A histogram appears to have two distinct peaks. The most likely explanation worth investigating is:",
+      "choices": [
+        "the class width was too wide",
+        "the data contains two different groups mixed together",
+        "the data was collected without randomization",
+        "relative frequencies were used instead of frequencies"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l02-q07",
+      "prompt": "A dataset of 40 quiz scores includes 6 scores in the class 70–79. Compute the relative frequency of that class, and explain what a cumulative relative frequency of 0.85 for that same class would tell you.",
+      "modelAnswer": "The relative frequency is 6/40 = 0.15, meaning 15% of scores fall in the 70–79 class. A cumulative relative frequency of 0.85 for that class means 85% of all scores are 79 or below — only 15% of students scored 80 or above.",
+      "rubric": [
+        { "id": "rel-freq", "description": "Computes 6/40 = 0.15 (or 15%)", "weight": 1 },
+        {
+          "id": "cumulative-meaning",
+          "description": "Explains cumulative 0.85 as the fraction of scores at or below the top of that class",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l02-q08",
+      "prompt": "Sketch in words what the histogram of house prices in a city typically looks like, name the shape, and predict how the mean will compare to the median.",
+      "modelAnswer": "Most houses cluster in a low-to-middle price range, with a small number of very expensive homes stretching a long tail to the right — a right-skewed distribution. Because the long right tail pulls the mean upward, the mean price will be higher than the median price.",
+      "rubric": [
+        {
+          "id": "shape",
+          "description": "Identifies the distribution as right-skewed (long tail toward high prices)",
+          "weight": 1
+        },
+        {
+          "id": "mean-vs-median",
+          "description": "Predicts mean > median because the tail pulls the mean",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l02-q09",
+      "prompt": "A colleague makes a histogram of 200 response times using 3 classes, sees no interesting pattern, and concludes the data is featureless. What would you check before accepting that conclusion, and why?",
+      "modelAnswer": "Check the class width: with only 3 classes, real features get smoothed away. Re-draw the histogram with more classes (roughly 5–15 for most datasets) and see whether skew, outliers, or multiple peaks appear. A conclusion about shape should hold across reasonable choices of class width, not just one.",
+      "rubric": [
+        {
+          "id": "class-width",
+          "description": "Identifies too-few/too-wide classes as the problem and suggests re-binning (≈5–15 classes)",
+          "weight": 2
+        },
+        {
+          "id": "robustness",
+          "description": "Notes that a real feature should survive different reasonable class choices",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l02-q10",
+      "prompt": "You have two datasets: the favorite music genre of 300 students, and the daily minutes those students spend listening. For each dataset, name the appropriate graph (bar chart or histogram) and justify the choice.",
+      "modelAnswer": "Favorite genre is categorical, so it gets a bar chart with separated bars — the categories have no numeric order or scale between them. Daily listening minutes is continuous quantitative data, so it gets a histogram with touching bars, because the classes sit on a continuous number line.",
+      "rubric": [
+        {
+          "id": "correct-pairing",
+          "description": "Pairs genre → bar chart and minutes → histogram",
+          "weight": 1
+        },
+        {
+          "id": "justification",
+          "description": "Justifies via categorical vs continuous data (separated vs touching bars)",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

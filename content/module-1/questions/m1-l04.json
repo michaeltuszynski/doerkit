@@ -1,0 +1,125 @@
+{
+  "lessonId": "m1-l04",
+  "questions": [
+    {
+      "kind": "mcq",
+      "id": "m1-l04-q01",
+      "prompt": "For the dataset 22, 25, 27, 30, 41, the range is:",
+      "choices": ["19", "29", "5", "11"],
+      "correctChoice": 0
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l04-q02",
+      "prompt": "The IQR is a better spread measure than the range when outliers are present because:",
+      "choices": [
+        "it uses the two most extreme observations",
+        "it measures the width of the middle half, ignoring the extreme quarters",
+        "it is always smaller than the range",
+        "it is measured in squared units"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l04-q03",
+      "prompt": "When computing a SAMPLE variance, you divide the sum of squared deviations by:",
+      "choices": ["n", "n − 1", "n + 1", "the mean"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l04-q04",
+      "prompt": "A sample has variance s² = 64 for exam scores measured in points. The standard deviation is:",
+      "choices": ["64 points", "32 points", "8 points", "8 squared points"],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l04-q05",
+      "prompt": "Exam scores are roughly bell-shaped with mean 75 and standard deviation 5. By the empirical rule, about 95% of scores fall between:",
+      "choices": ["70 and 80", "65 and 85", "60 and 90", "50 and 100"],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l04-q06",
+      "prompt": "Which spread measure is NOT resistant to outliers?",
+      "choices": [
+        "the IQR",
+        "the median absolute position",
+        "the standard deviation",
+        "the first quartile"
+      ],
+      "correctChoice": 2
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l04-q07",
+      "prompt": "Two classes both averaged 75 on an exam. Class A has standard deviation 3; Class B has standard deviation 15. Describe what an instructor should expect walking into each class, and why the mean alone hides this.",
+      "modelAnswer": "In Class A nearly all students performed close to 75 — the class is homogeneous, roughly 70 to 80. In Class B scores are all over the map, with some students excelling and some struggling badly. The mean alone hides this because it only locates the center; two distributions can share a center while differing enormously in how spread out students are.",
+      "rubric": [
+        {
+          "id": "interpretation",
+          "description": "Correctly contrasts tight clustering (A) vs wide variation (B) around the same mean",
+          "weight": 2
+        },
+        {
+          "id": "mean-blind",
+          "description": "States that center says nothing about spread",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l04-q08",
+      "prompt": "Compute the sample standard deviation of the dataset 4, 6, 8, 10, 12, showing the main steps.",
+      "modelAnswer": "The mean is 40/5 = 8. Deviations are −4, −2, 0, 2, 4; squared deviations are 16, 4, 0, 4, 16, which sum to 40. Dividing by n − 1 = 4 gives variance s² = 10, so the standard deviation is s = √10 ≈ 3.16.",
+      "rubric": [
+        {
+          "id": "process",
+          "description": "Shows the process: mean, deviations, squares, divide by n−1, square root",
+          "weight": 2
+        },
+        { "id": "value", "description": "Arrives at s ≈ 3.16 (s² = 10)", "weight": 1 }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l04-q09",
+      "prompt": "Why does the sample variance divide by n − 1 instead of n? Give the intuition, not a proof.",
+      "modelAnswer": "The deviations are measured from the sample's own mean, which was computed from the same data, so the data is on average slightly closer to its own mean than to the true population mean. Dividing by n would therefore understate the variance; dividing by the smaller n − 1 inflates the result just enough to make it an honest estimate of the population variance.",
+      "rubric": [
+        {
+          "id": "own-mean",
+          "description": "Notes deviations are taken from the sample's own mean, making them systematically too small",
+          "weight": 2
+        },
+        {
+          "id": "correction",
+          "description": "Explains n−1 as the correction that makes the estimate unbiased/honest",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l04-q10",
+      "prompt": "Delivery times have mean 29 minutes and standard deviation 7.3 minutes, and one delivery took 41 minutes. Using the empirical rule's language, is 41 minutes remarkable? What about a 55-minute delivery?",
+      "modelAnswer": "41 minutes is (41 − 29)/7.3 ≈ 1.6 standard deviations above the mean — outside the one-standard-deviation band that holds about 68% of data, but within two standard deviations, so it is on the slow side but not remarkable. 55 minutes is about 3.6 standard deviations above the mean, beyond the roughly-three-standard-deviation range that contains nearly all bell-shaped data, so it is genuinely exceptional and worth investigating.",
+      "rubric": [
+        {
+          "id": "banding",
+          "description": "Places 41 within ~2 SD (unremarkable) using the empirical rule bands",
+          "weight": 1
+        },
+        {
+          "id": "extreme",
+          "description": "Identifies 55 as ≈3+ SD out and therefore exceptional",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

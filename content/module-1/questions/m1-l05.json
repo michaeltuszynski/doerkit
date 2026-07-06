@@ -1,0 +1,144 @@
+{
+  "lessonId": "m1-l05",
+  "questions": [
+    {
+      "kind": "mcq",
+      "id": "m1-l05-q01",
+      "prompt": "Test scores have mean 70 and standard deviation 8. A score of 86 has a z-score of:",
+      "choices": ["1", "1.6", "2", "16"],
+      "correctChoice": 2
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l05-q02",
+      "prompt": "A negative z-score means the observation is:",
+      "choices": [
+        "an outlier",
+        "below the mean",
+        "below the median",
+        "impossible — z-scores are non-negative"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l05-q03",
+      "prompt": "Scoring at the 90th percentile on an exam means:",
+      "choices": [
+        "you scored 90% of the points",
+        "90% of test-takers scored at or below your score",
+        "you scored 90% above the mean",
+        "only 90 students scored higher"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l05-q04",
+      "prompt": "The five-number summary consists of:",
+      "choices": [
+        "mean, median, mode, range, IQR",
+        "minimum, Q1, median, Q3, maximum",
+        "minimum, mean, median, mode, maximum",
+        "Q1, Q2, Q3, mean, standard deviation"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l05-q05",
+      "prompt": "A dataset has Q1 = 40 and Q3 = 60. Using the 1.5×IQR rule, a value of 95 is:",
+      "choices": [
+        "not an outlier, because 95 < Q3 + IQR",
+        "a suspected outlier, because 95 > 90",
+        "not an outlier, because outliers must be below Q1",
+        "impossible to judge without the mean"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "mcq",
+      "id": "m1-l05-q06",
+      "prompt": "Two students compare standardized test results: one has z = +1.15 on test A, the other z = +1.13 on test B (different scales). The z-scores let us conclude:",
+      "choices": [
+        "the first student answered more questions correctly",
+        "the two stand in nearly the same position relative to their own test populations",
+        "test A is harder than test B",
+        "nothing — z-scores from different tests can never be compared"
+      ],
+      "correctChoice": 1
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l05-q07",
+      "prompt": "ACT scores have mean 21, SD 5.2; SAT scores have mean 1060, SD 195. One student scored 29 on the ACT, another 1350 on the SAT. Who performed better relative to their test population? Show the comparison.",
+      "modelAnswer": "The ACT student's z-score is (29 − 21)/5.2 ≈ 1.54; the SAT student's is (1350 − 1060)/195 ≈ 1.49. Both are strong, but the ACT student stands slightly higher relative to their own test's population, so the ACT student performed marginally better in relative terms.",
+      "rubric": [
+        {
+          "id": "z-computation",
+          "description": "Computes both z-scores correctly (≈1.54 and ≈1.49)",
+          "weight": 2
+        },
+        {
+          "id": "comparison",
+          "description": "Concludes via the z-scores that the ACT performance is (slightly) stronger relative to its population",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l05-q08",
+      "prompt": "A hospital growth chart says an infant's weight is at the 15th percentile. A worried parent reads this as a failing grade of 15%. Explain what the number actually means and why it is not a grade.",
+      "modelAnswer": "The 15th percentile means the infant weighs more than about 15% of infants the same age and less than about 85% — it is a position within the distribution of healthy infants, not a score out of 100. Percentiles rank; they don't grade. A perfectly healthy child must occupy every percentile, including the 15th; the number only becomes concerning in context, such as a sudden drop across percentiles over time.",
+      "rubric": [
+        {
+          "id": "position-meaning",
+          "description": "Explains percentile as position relative to peers (15% at or below)",
+          "weight": 2
+        },
+        {
+          "id": "not-a-grade",
+          "description": "Distinguishes rank from score/grade (someone must be at every percentile)",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l05-q09",
+      "prompt": "For the sorted dataset 55, 62, 68, 70, 72, 75, 78, 80, 84, 88, 92, 98 (n = 12), find the five-number summary and state whether a new value of 20 would be flagged as an outlier by the 1.5×IQR rule.",
+      "modelAnswer": "Minimum 55, Q1 = 69, median = 76.5, Q3 = 86, maximum 98. The IQR is 86 − 69 = 17, so the lower fence is 69 − 1.5(17) = 43.5. A value of 20 falls below 43.5, so it would be flagged as a suspected outlier.",
+      "rubric": [
+        {
+          "id": "summary",
+          "description": "Gets the five-number summary right (55, 69, 76.5, 86, 98)",
+          "weight": 2
+        },
+        {
+          "id": "fence",
+          "description": "Computes the lower fence (43.5) and flags 20 as an outlier",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "kind": "crq",
+      "id": "m1-l05-q10",
+      "prompt": "Your team dashboards report the p95 latency of an API. Connect this to percentile language from the lesson: what does p95 = 480ms claim, and why might a team track p95 instead of the mean latency?",
+      "modelAnswer": "p95 = 480ms means 95% of requests complete in 480ms or less — the 95th percentile of the latency distribution. Teams track it because latency data is right-skewed: a few very slow requests inflate the mean, while p95 directly describes the experience of nearly all users and is resistant to those extreme values.",
+      "rubric": [
+        {
+          "id": "p95-meaning",
+          "description": "States that 95% of requests are at or below 480ms",
+          "weight": 1
+        },
+        {
+          "id": "why-not-mean",
+          "description": "Explains skew/outlier inflation of the mean and percentile resistance (tail experience)",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}
